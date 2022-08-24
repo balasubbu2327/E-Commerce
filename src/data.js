@@ -27,19 +27,19 @@ export const categories = [
     id: 1,
     img: "https://cdn11.bigcommerce.com/s-pkla4xn3/images/stencil/1280x1280/products/2111/9920/COODRONY-Men-Shirt-Mens-Business-Casual-Shirts-2017-New-Arrival-Men-Famous-Brand-Clothing-Plaid-Long__41310.1574660753.jpg?c=2?imbypass=on",
     title: "SHIRT STYLE!",
-    cat: "women",
+    cat: "men",
   },
   {
     id: 2,
     img: "https://images.shaadisaga.com/shaadisaga_production/photos/pictures/000/731/532/new_medium/sabya8.jpg?1551166057",
     title: "PARTY WEAR",
-    cat: "coat",
+    cat: "party",
   },
   {
     id: 3,
     img: "https://5.imimg.com/data5/OH/YI/ZR/ANDROID-97859170/httpsimg1cfcdnclubfce0fc433f0a34be2afd52ff5327144377e0-jpg-500x500.jpg",
     title: "LIGHT JACKETS",
-    cat: "jeans",
+    cat: "coat",
   },
 ];
 

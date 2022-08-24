@@ -1,6 +1,8 @@
 import { Badge } from "@material-ui/core";
 import { Search, ShoppingCart } from "@mui/icons-material";
 import React from "react";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { mobile } from "../responsive";
 
@@ -66,33 +68,47 @@ const MenuItem = styled.div`
 `;
 
 const Navbar = () => {
+  const quantity = useSelector((state) => state.cart.quantity);
+
+  console.log(quantity);
+
   return (
     <Container>
       <Wrapper>
         <Left>
-          <Logo src="http://logos.textgiraffe.com/logos/logo-name/Bala-designstyle-candy-m.png" />
+          <Link to="/">
+            <Logo src="http://logos.textgiraffe.com/logos/logo-name/Bala-designstyle-candy-m.png" />
+          </Link>
         </Left>
         <Center>
           <Input placeholder="Search" />
-          <Search
-            style={{
-              padding: "3px",
-              height: "26px",
-              backgroundColor: "#fd0707 ",
-              color: "white",
-            }}
-          />
+          <Link to="/products/category">
+            <Search
+              style={{
+                padding: "3px",
+                height: "26px",
+                backgroundColor: "#fd0707 ",
+                color: "white",
+              }}
+            />
+          </Link>
         </Center>
         <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
-          <MenuItem>
-            <Badge badgeContent={3} color="secondary">
-              <ShoppingCart
-                style={{ color: "rgb(1, 51, 32)", height: "32px" }}
-              />
-            </Badge>
-          </MenuItem>
+          <Link to="/register">
+            <MenuItem>REGISTER</MenuItem>
+          </Link>
+          <Link to="/login">
+            <MenuItem>SIGN IN</MenuItem>
+          </Link>
+          <Link to="/cart">
+            <MenuItem>
+              <Badge badgeContent={quantity} color="secondary">
+                <ShoppingCart
+                  style={{ color: "rgb(1, 51, 32)", height: "32px" }}
+                />
+              </Badge>
+            </MenuItem>
+          </Link>
         </Right>
       </Wrapper>
     </Container>

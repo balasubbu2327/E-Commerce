@@ -40,6 +40,9 @@ const Form = styled.form`
 const Input = styled.input`
   flex: 1;
   min-width: 40%;
+  color: black;
+  font-weight: 500;
+  font-size: large;
   margin: 10px 0;
   padding: 10px;
 `;
